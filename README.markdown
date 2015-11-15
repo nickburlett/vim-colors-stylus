@@ -1,20 +1,23 @@
-# vim-colors-pencil
+# vim-colors-stylus
 
-> A light (and dark) color scheme for Vim inspired by iA Writer
-
-![markdown-example](http://i.imgur.com/BYLMdx5.jpg)
+> A light (and dark) color scheme for Vim, originaly based on vim-colors-pencil
 
 ## Features
 
-The _pencil_ color scheme takes its inspiration from iA Writer, an elegant
-word processor available on the iOS and OSX platforms.
+NOTE: this color scheme is still a major work in progress
 
-This Vim color scheme features:
+The _stylus_ color scheme is a color rework of the excellent _pencil_ color 
+scheme.
+
+The original _pencil_ color scheme took its inspiration from iA Writer, an 
+"elegant word processor available on the iOS and OSX platforms."
+
+This Vim color scheme (and the original _pencil__) features:
 
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the latter
 * Light and dark background variants
-* iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
+* iTerm color scheme (coming soon?) for using this color scheme with terminal-based Vim
 * Support for [tpope/vim-markdown][tm], [plasticboy/vim-markdown][pm], and
   [gabrielelana/vim-markdown][gm]
 * Support for the [bling/vim-airline][ba] status bar plugin
@@ -46,7 +49,7 @@ If you’re looking for greater contrast, set the following in your
 `.vimrc`:
 
 ```
-let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
+let g:stylus_higher_contrast_ui = 0   " 0=low (def), 1=high
 ```
 
 It currently only affects the blacks and grays.
@@ -60,7 +63,7 @@ Writer where the heading indicators are inside the left margin.
 If you’re looking for neutral heading colors:
 
 ```
-let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
+let g:stylus_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
 ### Code background color
@@ -71,10 +74,10 @@ code blocks will have a subtle gray background.
 If you’re looking for neutral code background:
 
 ```
-let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
+let g:stylus_neutral_code_bg = 1   " 0=gray (def), 1=normal
 ```
 
-See `g:pencil_higher_contrast_ui` above for adjusting the code background
+See `g:stylus_higher_contrast_ui` above for adjusting the code background
 contrast.
 
 ### Curled Underline for Spelling Highlights
@@ -83,7 +86,7 @@ You can choose between `undercurl` and `underline` in highlighting
 misspelled words.
 
 ```
-let g:pencil_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
+let g:stylus_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
 ```
 
 Non-spell underlines remain non-curled.
@@ -95,7 +98,7 @@ can opt-in to italic support for some syntax highlighting, such as comments,
 by setting the following in your `.vimrc`:
 
 ```
-let g:pencil_terminal_italics = 1
+let g:stylus_terminal_italics = 1
 ```
 
 ### Airline Theme
@@ -106,14 +109,14 @@ A matching theme for the [Airline][al] status bar plugin is available.
 Enable by adding to your `.vimrc`:
 
 ```
-let g:airline_theme = 'pencil'
+let g:airline_theme = 'stylus'
 ```
 
 [al]: https://github.com/bling/vim-airline
 
 ### Concealing \_\_styling markup\_\_ in Markdown
 
-The _pencil_ color scheme supports the highlighting groups in the
+The _stylus_ color scheme supports the highlighting groups in the
 [tpope/vim-markdown][tm] syntax plugin, to take advantage of Vim’s Conceal
 feature to hide `_` and `*` markup for \_*italic*\_, \*\*__bold__\*\* and
 \*\*\*___bold italic___\*\*\* styled text in Markdown
@@ -135,7 +138,7 @@ For more details on Vim’s Conceal feature, see:
 Just like any other color scheme:
 
 ```vim
-:colorscheme pencil
+:colorscheme stylus
 ```
 
 You can toggle between the light and dark variants:
@@ -166,13 +169,6 @@ Cousine is a good match for Nitti Light.
 
 ## See also
 
-* [mattly/iterm-colors-pencil][it] - terminal support for mutt, tmux and iTerm
-* [gummesson/term-colors-pencil][tcp] - terminal support for urxvt and termite
-* [mattly/atom-colors-pencil-light][ap] - Atom version of the pencil color scheme
-
-[it]: https://github.com/mattly/iterm-colors-pencil
-[tcp]: https://github.com/gummesson/term-colors-pencil
-[ap]: https://github.com/mattly/atom-colors-pencil-light
 
 If you find this colorscheme useful, you may want to check out these
 plugins by [@reedes][re]:
@@ -203,7 +199,10 @@ _thematic_ has more details on setting up emulation of iA Writer.
 
 ## Contributors
 
-Thanks to those who have helped improve the _pencil_ color scheme:
+The original _pencil_ color scheme was written by 
+[@reedes](https://github.com/reedes).
+
+Thanks to those who have helped improve the original _pencil_ color scheme:
 
 * [@mattly](https://github.com/mattly)
 * [@tamagokun](https://github.com/tamagokun)
