@@ -1,8 +1,9 @@
 " Vim Color File
-" Name:       pencil.vim
-" Version:    0.6
-" Maintainer: github.com/reedes github.com/mattly
+" Name:       stylus.vim
+" Version:    0.1
+" Maintainer: github.com/nickburlett
 " License:    The MIT License (MIT)
+" Originally based on stylus.vim
 
 " Original iA Writer colors, to use as a guide
 " White           #F1F1F1
@@ -35,27 +36,27 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='pencil'
+let g:colors_name='stylus'
 
-if ! exists("g:pencil_higher_contrast_ui")
-  let g:pencil_higher_contrast_ui = 0
+if ! exists("g:stylus_higher_contrast_ui")
+  let g:stylus_higher_contrast_ui = 0
 endif
 
-if ! exists("g:pencil_neutral_code_bg")
-  let g:pencil_neutral_code_bg = 0
+if ! exists("g:stylus_neutral_code_bg")
+  let g:stylus_neutral_code_bg = 0
 endif
 
-if ! exists("g:pencil_neutral_headings")
-  let g:pencil_neutral_headings = 0
+if ! exists("g:stylus_neutral_headings")
+  let g:stylus_neutral_headings = 0
 endif
 
 " not all terminals support italics properly.  If yours does, opt-in.
-if ! exists("g:pencil_terminal_italics")
-  let g:pencil_terminal_italics = 0
+if ! exists("g:stylus_terminal_italics")
+  let g:stylus_terminal_italics = 0
 endif
 
-if ! exists("g:pencil_spell_undercurl")
-  let g:pencil_spell_undercurl = 1
+if ! exists("g:stylus_spell_undercurl")
+  let g:stylus_spell_undercurl = 1
 endif
 
 " Colors
@@ -66,10 +67,10 @@ let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 
-if g:pencil_higher_contrast_ui == 0
+if g:stylus_higher_contrast_ui == 0
   " darker shadow and whiter grays
-  let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
-  let s:light_gray    = { "gui": "#D9D9D9", "cterm": "253" }
+  let s:subtle_black  = { "gui": "#2C2C2C", "cterm": "235" }
+  let s:light_gray    = { "gui": "#D0D0D0", "cterm": "253" }
   let s:lighter_gray  = { "gui": "#E5E6E6", "cterm": "254" }
 else
   " lighter shadows and darker grays
@@ -79,25 +80,27 @@ else
 endif
 
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
+let s:dark_red        = { "gui": "#B0121E", "cterm": "1"   }
+let s:light_red       = { "gui": "#DB4545", "cterm": "1"   }
+let s:dark_orange     = { "gui": "#A22917", "cterm": "167" }
+let s:light_orange    = { "gui": "#B74A3D", "cterm": "167" }
 
-let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
-let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
+let s:darker_blue     = { "gui": "#25324B", "cterm": "18"  }
+let s:dark_blue       = { "gui": "#0F3A80", "cterm": "4"   }
+let s:blue            = { "gui": "#3E7CE9", "cterm": "12"  }
+let s:light_blue      = { "gui": "#69A2EE", "cterm": "153" }
+let s:lighter_blue    = { "gui": "#E0EBFF", "cterm": "153" }
+let s:dark_cyan       = { "gui": "#395885", "cterm": "6"   }
+let s:light_cyan      = { "gui": "#7FA6D5", "cterm": "14"  }
 
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
+let s:dark_green      = { "gui": "#18830B", "cterm": "2"   }
+let s:light_green     = { "gui": "#44B662", "cterm": "10"  }
 
-let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
-let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
+let s:dark_magenta    = { "gui": "#BE2D56", "cterm": "5"   }
+let s:light_magenta   = { "gui": "#D46772", "cterm": "13"  }
 
-let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:light_yellow    = { "gui": "#FFEE21", "cterm": "11"  }
+let s:dark_yellow     = { "gui": "#FED10D", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg              = s:black
@@ -105,25 +108,31 @@ if &background == "dark"
   let s:bg_very_subtle  = s:subtle_black
   let s:norm            = s:lighter_gray
   let s:norm_subtle     = s:light_gray
-  let s:purple          = s:light_purple
+  let s:magenta         = s:light_magenta
   let s:cyan            = s:light_cyan
   let s:green           = s:light_green
   let s:red             = s:light_red
-  let s:visual          = s:lighter_black
+  let s:yellow          = s:light_yellow
+  let s:orange          = s:light_orange
+  let s:visual          = s:darker_blue
+  let s:std_blue        = s:light_blue
 else
   let s:bg              = s:white
   let s:bg_subtle       = s:light_gray
   let s:bg_very_subtle  = s:lighter_gray
   let s:norm            = s:light_black
   let s:norm_subtle     = s:lighter_black
-  let s:purple          = s:dark_purple
+  let s:magenta         = s:dark_magenta
   let s:cyan            = s:dark_cyan
   let s:green           = s:dark_green
   let s:red             = s:dark_red
-  let s:visual          = s:light_blue
+  let s:yellow          = s:dark_yellow
+  let s:orange          = s:dark_orange
+  let s:visual          = s:lighter_blue
+  let s:std_blue        = s:dark_blue
 endif
 
-if g:pencil_neutral_headings == 1
+if g:stylus_neutral_headings == 1
   let s:head_a         = s:norm
   let s:head_b         = s:norm
   let s:head_c         = s:norm
@@ -133,13 +142,13 @@ else
   let s:head_c         = s:dark_cyan
 endif
 
-if g:pencil_neutral_code_bg == 1
+if g:stylus_neutral_code_bg == 1
   let s:code_bg        = s:bg
 else
   let s:code_bg        = s:bg_very_subtle
 endif
 
-if g:pencil_spell_undercurl == 1
+if g:stylus_spell_undercurl == 1
   let s:sp_un      = 'undercurl'
 else
   let s:sp_un      = 'underline'
@@ -148,7 +157,7 @@ endif
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
-  if g:pencil_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+  if g:stylus_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
     unlet a:style.cterm
   endif
   execute "highlight" a:group
@@ -165,7 +174,7 @@ endfunction
 " (see `:h w18`)
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:blue, "fg": s:bg })
 call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:cyan})
@@ -175,7 +184,7 @@ hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
 
-call s:h("Identifier",    {"fg": s:dark_blue})
+call s:h("Identifier",    {"fg": s:std_blue})
 hi! link Function         Identifier
 
 call s:h("Statement",     {"fg": s:green})
@@ -192,32 +201,34 @@ hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Type",          {"fg": s:purple})
+call s:h("Type",          {"fg": s:orange})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:pink})
+call s:h("Special",       {"fg": s:magenta})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
 hi! link SpecialComment   Special
 hi! link Debug            Special
 
-call s:h("Underlined",    {"fg": s:norm                      , "gui": "underline", "cterm": "underline"})
-call s:h("Ignore",        {"fg": s:bg                                                                  })
-call s:h("Error",         {"fg": s:actual_white, "bg": s:red , "gui": "bold"     , "cterm": "bold"     })
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold"     , "cterm": "bold"     })
+call s:h("Underlined",    {"fg": s:norm                        , "gui": "underline", "cterm": "underline"})
+call s:h("Ignore",        {"fg": s:bg                                                                    })
+call s:h("Error",         {"fg": s:actual_white, "bg": s:red   , "gui": "bold"     , "cterm": "bold"     })
+call s:h("Todo",          {"fg": s:actual_white, "bg": s:orange, "gui": "bold"     , "cterm": "bold"     })
+
+" TODO todo 
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
 
 call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:bg_subtle})
-call s:h("Directory",     {"fg": s:dark_blue})
-call s:h("ErrorMsg",      {"fg": s:pink})
+call s:h("Directory",     {"fg": s:std_blue})
+call s:h("ErrorMsg",      {"fg": s:orange})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",        {"bg": s:bg_subtle})
+call s:h("Search",        {"bg": s:yellow, "fg": s:light_black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
@@ -227,7 +238,7 @@ call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("Conceal",       {"fg": s:norm})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
-call s:h("Title",         {"fg": s:dark_blue})
+call s:h("Title",         {"fg": s:std_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:red})
@@ -236,19 +247,19 @@ call s:h("Folded",        {"fg": s:medium_gray})
 call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffChange",    {"fg": s:dark_yellow})
-call s:h("DiffText",      {"fg": s:dark_blue})
+call s:h("DiffChange",    {'bg': s:bg_subtle})
+call s:h("DiffText",      {"fg": s:std_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": s:sp_un, "sp": s:red})
   call s:h("SpellCap",    {"gui": s:sp_un, "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": s:sp_un, "sp": s:pink})
+  call s:h("SpellRare",   {"gui": s:sp_un, "sp": s:orange})
   call s:h("SpellLocal",  {"gui": s:sp_un, "sp": s:dark_green})
 else
   call s:h("SpellBad",    {"cterm": s:sp_un, "fg": s:red})
   call s:h("SpellCap",    {"cterm": s:sp_un, "fg": s:light_green})
-  call s:h("SpellRare",   {"cterm": s:sp_un, "fg": s:pink})
+  call s:h("SpellRare",   {"cterm": s:sp_un, "fg": s:orange})
   call s:h("SpellLocal",  {"cterm": s:sp_un, "fg": s:dark_green})
 endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
@@ -260,7 +271,7 @@ call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cter
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
-call s:h("ColorColumn",   {"bg": s:bg_subtle})
+call s:h("ColorColumn",   {"bg": s:bg_very_subtle})
 
 " remainder of syntax highlighting
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
