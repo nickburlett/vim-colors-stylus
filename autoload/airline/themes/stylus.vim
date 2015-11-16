@@ -14,14 +14,14 @@ function! airline#themes#stylus#refresh()
   " Base colors
   let s:base03  = {'t': s:ansi_colors ?   8 : (s:tty ? '0' : 234), 'g': '#212121'}
   let s:base02  = {'t': s:ansi_colors ? '0' : (s:tty ? '0' : 235), 'g': '#424242'}
-  let s:base01  = {'t': s:ansi_colors ?  10 : (s:tty ? '0' : 240), 'g': '#909090'}
-  let s:base00  = {'t': s:ansi_colors ?  11 : (s:tty ? '7' : 241), 'g': '#3E7CE9'}
-  let s:base0   = {'t': s:ansi_colors ?  12 : (s:tty ? '7' : 244), 'g': '#7FA6D5'}
-  let s:base1   = {'t': s:ansi_colors ?  14 : (s:tty ? '7' : 245), 'g': '#636363'}
-  let s:base2   = {'t': s:ansi_colors ?   7 : (s:tty ? '7' : 254), 'g': '#D9D9D9'}
+  let s:base01  = {'t': s:ansi_colors ?  10 : (s:tty ? '0' : 251), 'g': '#909090'}
+  let s:base00  = {'t': s:ansi_colors ?  11 : (s:tty ? '7' :  27), 'g': '#3E7CE9'}
+  let s:base0   = {'t': s:ansi_colors ?  12 : (s:tty ? '7' : 117), 'g': '#7FA6D5'}
+  let s:base1   = {'t': s:ansi_colors ?  14 : (s:tty ? '7' : 243), 'g': '#636363'}
+  let s:base2   = {'t': s:ansi_colors ?   7 : (s:tty ? '7' : 251), 'g': '#D9D9D9'}
   let s:base3   = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : 7  ), 'g': '#C6C6C6'}
   let s:darkblue= {'t': s:ansi_colors ?   4 : (s:tty ? '4' : 24 ), 'g': '#005F87'}
-  let s:orange  = {'t': s:ansi_colors ?   9 : (s:tty ? '1' : 166), 'g': '#A22917'}
+  let s:orange  = {'t': s:ansi_colors ?   9 : (s:tty ? '1' : 166), 'g': '#B74A3D'}
   let s:red     = {'t': s:ansi_colors ?   1 : (s:tty ? '1' : 160), 'g': '#B0121E'}
   let s:magenta = {'t': s:ansi_colors ?   5 : (s:tty ? '5' : 125), 'g': '#BE2D56'}
   let s:violet  = {'t': s:ansi_colors ?  13 : (s:tty ? '5' : 61 ), 'g': '#6855DE'}

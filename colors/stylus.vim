@@ -62,8 +62,8 @@ endif
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
-let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
+let s:white           = { "gui": "#F1F1F1", "cterm": "7"  }
+let s:actual_white    = { "gui": "#FFFFFF", "cterm": "255" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 
@@ -173,9 +173,9 @@ endfunction
 " common groups ================================================================
 " (see `:h w18`)
 
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:bg })
-call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
+call s:h("Normal",        {"bg": s:bg,  "fg": s:norm})
+call s:h("Cursor",        {"bg": s:blue,"fg": s:bg })
+call s:h("Comment",       {"bg": s:bg,  "fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:cyan})
 hi! link String           Constant
