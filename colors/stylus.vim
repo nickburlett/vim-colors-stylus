@@ -1,34 +1,9 @@
 " Vim Color File
 " Name:       stylus.vim
-" Version:    0.1
+" Version:    0.2
 " Maintainer: github.com/nickburlett
 " License:    The MIT License (MIT)
 " Originally based on stylus.vim
-
-" Original iA Writer colors, to use as a guide
-" White           #F1F1F1
-" OffWhiteIPad    #F5F2EC
-" OffWhiteDemo    #F9F8F4
-" Cursor          #20BBFC
-" Selection       #B6D6FD
-" SelectionNOS    #D4D4D4
-" StatusBar       #EDEDED
-" StatusBarBorder #D9D9D9   used for search too
-" Text            #424242
-" Blue            #B5D6FD
-" Green           #30C798
-" Blue2           #1DAEE4
-" gray            #999999
-" Red             #E32791
-" UnfocusedText   #B8B8B8
-" MenuSelected    #2C81FB
-" MenuUnSelected  #545454
-" MenuText        #F1F1F1
-" LightKeyBg      #4B4B4B
-" DarkKeyBg       #262626
-" NearBlack       #181818
-" SyntaxButton    #363738
-" SearchHighlight #F3E430  yellow
 
 hi clear
 
@@ -82,8 +57,8 @@ endif
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
 let s:dark_red        = { "gui": "#B0121E", "cterm": "1"   }
 let s:light_red       = { "gui": "#DB4545", "cterm": "1"   }
-let s:dark_orange     = { "gui": "#A22917", "cterm": "167" }
-let s:light_orange    = { "gui": "#B74A3D", "cterm": "167" }
+let s:dark_orange     = { "gui": "#A52915", "cterm": "167" }
+let s:light_orange    = { "gui": "#C4593C", "cterm": "167" }
 
 let s:darker_blue     = { "gui": "#25324B", "cterm": "18"  }
 let s:dark_blue       = { "gui": "#0F3A80", "cterm": "4"   }
@@ -93,8 +68,8 @@ let s:lighter_blue    = { "gui": "#E0EBFF", "cterm": "153" }
 let s:dark_cyan       = { "gui": "#395885", "cterm": "6"   }
 let s:light_cyan      = { "gui": "#7FA6D5", "cterm": "14"  }
 
-let s:dark_green      = { "gui": "#18830B", "cterm": "2"   }
-let s:light_green     = { "gui": "#44B662", "cterm": "10"  }
+let s:dark_green      = { "gui": "#177B02", "cterm": "2"   }
+let s:light_green     = { "gui": "#339546", "cterm": "10"  }
 
 let s:dark_magenta    = { "gui": "#BE2D56", "cterm": "5"   }
 let s:light_magenta   = { "gui": "#D46772", "cterm": "13"  }
@@ -137,7 +112,7 @@ if g:stylus_neutral_headings == 1
   let s:head_b         = s:norm
   let s:head_c         = s:norm
 else
-  let s:head_a         = s:dark_blue
+  let s:head_a         = s:std_blue
   let s:head_b         = s:blue
   let s:head_c         = s:dark_cyan
 endif
@@ -177,14 +152,14 @@ call s:h("Normal",        {"bg": s:bg,  "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue,"fg": s:bg })
 call s:h("Comment",       {"bg": s:bg,  "fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
-call s:h("Constant",      {"fg": s:cyan})
+call s:h("Constant",      {"fg": s:blue})
 hi! link String           Constant
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
 
-call s:h("Identifier",    {"fg": s:std_blue})
+call s:h("Identifier",    {"fg": s:orange})
 hi! link Function         Identifier
 
 call s:h("Statement",     {"fg": s:green})
@@ -195,18 +170,18 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-call s:h("PreProc",       {"fg": s:red})
+call s:h("PreProc",       {"fg": s:orange})
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Type",          {"fg": s:orange})
+call s:h("Type",          {"fg": s:cyan})
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-call s:h("Special",       {"fg": s:magenta})
+call s:h("Special",       {"fg": s:orange})
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
@@ -217,8 +192,6 @@ call s:h("Underlined",    {"fg": s:norm                        , "gui": "underli
 call s:h("Ignore",        {"fg": s:bg                                                                    })
 call s:h("Error",         {"fg": s:actual_white, "bg": s:red   , "gui": "bold"     , "cterm": "bold"     })
 call s:h("Todo",          {"fg": s:actual_white, "bg": s:orange, "gui": "bold"     , "cterm": "bold"     })
-
-" TODO todo 
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`

@@ -2,6 +2,8 @@
 
 > A light (and dark) color scheme for Vim, originaly based on vim-colors-pencil
 
+![code-example](https://raw.githubusercontent.com/nickburlett/vim-colors-stylus/master/screenshots/stylus_code.png)
+
 ## Features
 
 NOTE: this color scheme is still a major work in progress
@@ -12,7 +14,7 @@ scheme.
 The original _pencil_ color scheme took its inspiration from iA Writer, an 
 "elegant word processor available on the iOS and OSX platforms."
 
-This Vim color scheme (and the original _pencil__) features:
+This Vim color scheme (and the original _pencil_) features:
 
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the latter
@@ -152,9 +154,10 @@ Like any other color scheme, you can add these commands to your `.vimrc`.
 
 ## Font choices
 
-iA Writer uses a typeface called ‘Nitti Light’ by Blue Monday. ($)
+I generally use [Source Code Pro](https://github.com/adobe-fonts/source-code-pro),
+a free monospace font family from Adobe. 
 
-Free alternatives with **bold** and _italic_ support include:
+[@reedes][re] recommeded the following for the stylus theme:
 
 * [Anonymous Pro](https://www.google.com/fonts/specimen/Anonymous+Pro) (serif)
 * [Courier Prime](http://quoteunquoteapps.com/courierprime/) (serif)
@@ -165,13 +168,12 @@ Free alternatives with **bold** and _italic_ support include:
 * [Luxi Mono Regular](http://www.fontsquirrel.com/fonts/Luxi-Mono) (serif)
 * [Ubuntu Mono](https://www.google.com/fonts/specimen/Ubuntu+Mono)
 
-Cousine is a good match for Nitti Light.
 
 ## See also
 
 
 If you find this colorscheme useful, you may want to check out these
-plugins by [@reedes][re]:
+plugins by the original author of _pencil_, [@reedes][re]:
 
 * [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-litecorrect][lc] - lightweight auto-correction for Vim

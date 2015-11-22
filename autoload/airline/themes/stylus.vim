@@ -21,7 +21,7 @@ function! airline#themes#stylus#refresh()
   let s:base2   = {'t': s:ansi_colors ?   7 : (s:tty ? '7' : 251), 'g': '#D9D9D9'}
   let s:base3   = {'t': s:ansi_colors ?  15 : (s:tty ? '7' : 7  ), 'g': '#C6C6C6'}
   let s:darkblue= {'t': s:ansi_colors ?   4 : (s:tty ? '4' : 24 ), 'g': '#005F87'}
-  let s:orange  = {'t': s:ansi_colors ?   9 : (s:tty ? '1' : 166), 'g': '#B74A3D'}
+  let s:orange  = {'t': s:ansi_colors ?   9 : (s:tty ? '1' : 166), 'g': '#C4593C'}
   let s:red     = {'t': s:ansi_colors ?   1 : (s:tty ? '1' : 160), 'g': '#B0121E'}
   let s:magenta = {'t': s:ansi_colors ?   5 : (s:tty ? '5' : 125), 'g': '#BE2D56'}
   let s:violet  = {'t': s:ansi_colors ?  13 : (s:tty ? '5' : 61 ), 'g': '#6855DE'}
