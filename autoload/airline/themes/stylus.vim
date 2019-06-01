@@ -46,6 +46,7 @@ function! airline#themes#stylus#refresh()
   endif
   let s:NF = [s:orange, s:N3[1], '']
   let s:NW = [s:base3, s:orange, '']
+  let s:NE = [s:base3, s:red, '']
   if s:background == 'dark'
     let s:NM = [s:base1, s:N3[1], '']
     let s:NMi = [s:base2, s:N3[1], '']
@@ -111,12 +112,18 @@ function! airline#themes#stylus#refresh()
   let g:airline#themes#stylus#palette.normal.airline_warning = [
         \ s:NW[0].g, s:NW[1].g, s:NW[0].t, s:NW[1].t, s:NW[2]]
 
+  let g:airline#themes#stylus#palette.normal.airline_error = [
+        \ s:NE[0].g, s:NE[1].g, s:NE[0].t, s:NE[1].t, s:NE[2]]
+
   let g:airline#themes#stylus#palette.normal_modified = {
         \ 'airline_c': [s:NM[0].g, s:NM[1].g,
         \ s:NM[0].t, s:NM[1].t, s:NM[2]]}
 
   let g:airline#themes#stylus#palette.normal_modified.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
+
+  let g:airline#themes#stylus#palette.normal_modified.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
 
   let g:airline#themes#stylus#palette.insert = airline#themes#generate_color_map(
         \ [s:I1[0].g, s:I1[1].g, s:I1[0].t, s:I1[1].t, s:I1[2]],
@@ -133,6 +140,9 @@ function! airline#themes#stylus#refresh()
   let g:airline#themes#stylus#palette.insert_modified.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
 
+  let g:airline#themes#stylus#palette.insert_modified.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
+
   let g:airline#themes#stylus#palette.visual = airline#themes#generate_color_map(
         \ [s:V1[0].g, s:V1[1].g, s:V1[0].t, s:V1[1].t, s:V1[2]],
         \ [s:V2[0].g, s:V2[1].g, s:V2[0].t, s:V2[1].t, s:V2[2]],
@@ -141,12 +151,18 @@ function! airline#themes#stylus#refresh()
   let g:airline#themes#stylus#palette.visual.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
 
+  let g:airline#themes#stylus#palette.visual.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
+
   let g:airline#themes#stylus#palette.visual_modified = {
         \ 'airline_c': [s:VM[0].g, s:VM[1].g,
         \ s:VM[0].t, s:VM[1].t, s:VM[2]]}
 
   let g:airline#themes#stylus#palette.visual_modified.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
+
+  let g:airline#themes#stylus#palette.visual_modified.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
 
   let g:airline#themes#stylus#palette.replace = airline#themes#generate_color_map(
         \ [s:R1[0].g, s:R1[1].g, s:R1[0].t, s:R1[1].t, s:R1[2]],
@@ -156,12 +172,18 @@ function! airline#themes#stylus#refresh()
   let g:airline#themes#stylus#palette.replace.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
 
+  let g:airline#themes#stylus#palette.replace.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
+
   let g:airline#themes#stylus#palette.replace_modified = {
         \ 'airline_c': [s:RM[0].g, s:RM[1].g,
         \ s:RM[0].t, s:RM[1].t, s:RM[2]]}
 
   let g:airline#themes#stylus#palette.replace_modified.airline_warning =
         \ g:airline#themes#stylus#palette.normal.airline_warning
+
+  let g:airline#themes#stylus#palette.replace_modified.airline_error =
+        \ g:airline#themes#stylus#palette.normal.airline_error
 
   let g:airline#themes#stylus#palette.tabline = {}
 
